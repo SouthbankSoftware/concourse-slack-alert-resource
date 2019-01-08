@@ -34,7 +34,11 @@ func buildMessage(alert Alert, m concourse.BuildMetadata) *slack.Message {
 		},
 	}
 
-	return &slack.Message{Attachments: []slack.Attachment{attachment}, Channel: alert.Channel}
+	return &slack.Message{
+		Text:        alert.Text,
+		Attachments: []slack.Attachment{attachment},
+		Channel:     alert.Channel,
+	}
 }
 
 func previousBuildStatus(input *concourse.OutRequest, m concourse.BuildMetadata) (string, error) {

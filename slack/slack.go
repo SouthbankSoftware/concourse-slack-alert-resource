@@ -10,6 +10,7 @@ import (
 // Message represents a Slack API message
 // https://api.slack.com/docs/messages
 type Message struct {
+	Text        string       `json:"text"`
 	Attachments []Attachment `json:"attachments"`
 	Channel     string       `json:"channel,omitempty"`
 }
