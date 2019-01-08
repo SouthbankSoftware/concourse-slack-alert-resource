@@ -33,6 +33,7 @@ type InResponse struct {
 type OutParams struct {
 	AlertType string `json:"alert_type"`
 	Message   string `json:"message"`
+	Text      string `json:"text"`
 	Color     string `json:"color"`
 	Disable   bool   `json:"disable"`
 	Channel   string `json:"channel"`
